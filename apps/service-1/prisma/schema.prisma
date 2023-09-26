@@ -9,8 +9,6 @@ generator client {
 
 model Customer {
   createdAt DateTime @default(now())
-  id        String   @id @default(cuid())
+  id        String   @id @default(cuid()) @map("filename") @db.VarChar(30)
   updatedAt DateTime @updatedAt
-
-  @@@id @db.VarChar(30) @map("filename")
 }
