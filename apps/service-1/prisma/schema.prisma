@@ -12,5 +12,5 @@ model Customer {
   id        String   @id @default(cuid())
   updatedAt DateTime @updatedAt
 
-  @@@id @default(cuid())
+  @@@id @db.VarChar(30) @map("filename")
 }
